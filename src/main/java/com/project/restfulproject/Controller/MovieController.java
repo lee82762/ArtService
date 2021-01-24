@@ -35,7 +35,7 @@ public class MovieController {
                 "&shprfnmfct="+shprfnmfct;
 
         URL url1= new URL(url);
-        System.out.println(url);
+        
 
         HttpURLConnection httpURLConnection=(HttpURLConnection) url1.openConnection();
         httpURLConnection.setRequestMethod("GET");
