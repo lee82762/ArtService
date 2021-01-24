@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2>로그인 성공화면</h2>
+
+  <form action="/member/login/logout/" method="get">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">로그아웃</button>
+  </form>
+
+  <form action="/member/usercheck" method="get">
+      <div class="checkbox mb-3">
+          <label><a href="/member/login/usercheck">회원상세정보</a></label>
+      </div>
+  </form>
+
+  <h1>세션 조회</h1>
+  session['userId'] : <span th:text="${session['member'].address}"></span><br/>
+  session.userId : <span th:text="${session.member}"></span><br/>
+</body>
+</html>

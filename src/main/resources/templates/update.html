@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+    </script>
+</head>
+<body>
+<h2>수정페이지</h2>
+
+<form action="/member/login/usercheck/update/update1" name="update1" method="post">
+    session['address'] : <span th:text="${session['member'].address}"></span><br/>
+이름: <input type="text" name="name" value=""> <br>
+아이디 : <input type="text" name="checkid" value=""> <br>
+비밀번호 : <input type="text" name="password" value=""> <br>
+주소 : <input type="text" name="address" value=""><br>
+
+<input type="submit" value="수정">
+</form>
+
+
+<form action="/member/login/usercheck/update/delete"  method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="회원탈퇴">
+</form>
+
+
+</body>
+</html>
