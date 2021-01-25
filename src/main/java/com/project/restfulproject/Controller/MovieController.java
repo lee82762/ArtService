@@ -19,6 +19,7 @@ import java.net.URL;
 @RequestMapping("/movie")
 public class MovieController {
     private static MovieListService movieListService;
+    //인증키
     String key="63c3d4c3e3724ea08877a2ef4d87e222";
 
 
@@ -35,7 +36,7 @@ public class MovieController {
                 "&shprfnmfct="+shprfnmfct;
 
         URL url1= new URL(url);
-        
+
 
         HttpURLConnection httpURLConnection=(HttpURLConnection) url1.openConnection();
         httpURLConnection.setRequestMethod("GET");
